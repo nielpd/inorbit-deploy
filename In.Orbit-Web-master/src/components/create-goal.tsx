@@ -1,5 +1,4 @@
 import {
-  Dialog,
   DialogClose,
   DialogContent,
   DialogDescription,
@@ -13,13 +12,13 @@ import {
   RadioGroupItem,
 } from './ui/radio-group'
 import { Button } from './ui/button'
-import { Filter, X } from 'lucide-react'
 
 import { Controller, useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { createGoal } from '../http/create-goal'
 import { useQueryClient } from '@tanstack/react-query'
+import { X } from 'lucide-react'
 
 const createZodForm = z.object({
   title: z.string().min(1, 'Informe a atividade que deseja realizar'),
