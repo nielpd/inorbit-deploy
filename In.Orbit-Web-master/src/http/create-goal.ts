@@ -17,4 +17,12 @@ export async function createGoal({
       desiredWeeklyFrequency,
     }),
   })
+  if (res.ok) {
+    const data = await res.json();
+    console.log(data);
+    return data;
+  } else {
+    console.error('Network response was not ok.');
+    return null;
+  }
 }
